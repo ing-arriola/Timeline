@@ -32,3 +32,49 @@ body{
 h1{
     font-size: 2.3rem;
 }
+
+#timeline ul{
+    background: var(--primary-color);
+    padding: 50px 0;
+}
+/* Create line */
+#timeline ul li{
+    list-style: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background: #fff;
+}
+
+/* boxes */
+#timeline ul li div{
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 1rem;
+    background: var(--secondary-color);
+    transition: all 0.5s ease-in-out;
+}
+
+/* right side */
+#timeline ul li:nth-child(odd) div{
+    left:40px;
+}
+#timeline ul li:nth-child(even) div{
+    left:-434px;
+}
+
+/* dots */
+#timeline ul li:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 25px;
+    height: 25px;
+    background: var(--secondary-color);
+    transform: translateX(-50%);
+    border-radius: 50%;
+    transition: background 0.5s ease-in-out;
+}
