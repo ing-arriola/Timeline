@@ -18,7 +18,7 @@ const isInViewPort = el => {
 // Loop through all li elements
 const run = () =>
     items.forEach(item => {
-        if (isInViewPort)
+        if (isInViewPort(item))
             item.classList.add('show')
     }
     )

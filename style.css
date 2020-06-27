@@ -55,14 +55,18 @@ h1{
     padding: 1rem;
     background: var(--secondary-color);
     transition: all 0.5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
 }
 
 /* right side */
 #timeline ul li:nth-child(odd) div{
     left:40px;
+    transform: translate(200px,0);
 }
 #timeline ul li:nth-child(even) div{
     left:-434px;
+    transform: translate(-200px,0);
 }
 
 /* dots */
@@ -99,6 +103,12 @@ h1{
     right: -15px;
     border-width: 8px 0 8px 16px;
     border-color: transparent transparent transparent var(--secondary-color);
+}
+
+#timeline ul li.show div{
+    transform: none;
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Media queries for responsive */
